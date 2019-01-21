@@ -1,0 +1,4 @@
+# Folders to exclude from version control
+**/venv/
+
+# Files to exclude from version control

@@ -1,4 +1,3 @@
-
 # hysplit_metdata_cds 
 Code to download ERA5 meteorological data from ECMWF that will suitable for converting to ARL format for ingestion into HYSPLIT.
 The downloaded grib files will be suitable for use with the era52arl program available with the HYSPLIT distribution.
@@ -23,9 +22,18 @@ for command line options run with --help <br>
 The program will write a file called new_era52arl.cfg. This file can be used as an input into the era52arl conversion program.
 It should be renamed  era52arl.cfg  to be read automatically by the program.
 
-# installing cdsapi
-https://cds.climate.copernicus.eu/api-how-to
-You will need to create an account with Copernicus Data Service to receive an api key.
+## Installing the CDS API
+This script requires the cdsapi to be available to your PYTHONPATH. The best way is to install it via pip and the
+provided requirements.txt file. This should install all necessary requirements at once. just execute the following
+on your command line.
+
+```bash
+cd hysplit_metadata
+pip install -r requirements.txt
+```
+
+The CDS API will not work out of the box. Instead it requires an access token which has to be requested from the CDS.
+The way how to receive the access token is described at https://cds.climate.copernicus.eu/api-how-to. 
 
 # hysplit_metdata uses the ecmwf-api
 # Installing ecmwfapi module

@@ -1,0 +1,2 @@
+# Copernicus Data Store API Package
+cdsapi>=0.1.1
